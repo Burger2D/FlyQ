@@ -162,3 +162,15 @@ XPS foam boards are great for this project as they are lightweight and help me k
 This concludes Part 1 of the FlyQ project.
 
 spent ~15 days designing, refining and finalizing the design, parts and budget.
+
+## 27th June
+wait a second, wasn't that the end?
+apparently not, there's more to come.
+
+
+Designed with a meticulous selection of components to achieve a compact, efficient, and high-performance system.
+
+I present you FlyQ, the ultralight fixed-wing autonomous UAV.
+
+![FlyQ Airframe Design Top](airframe.png)
+.stl files in root
