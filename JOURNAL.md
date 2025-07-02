@@ -1,11 +1,9 @@
-```
 ---
 title: "FlyQ"
 author: "Burger"
 description: "Fixed-wing ultralight autonomous UAV"
 created_at: "2025-06-01"
 ---
-```
 
 # FlyQ
 An Ultralight fixed wing autonomous UAV.
