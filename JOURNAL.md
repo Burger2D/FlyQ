@@ -3,6 +3,8 @@ title: "FlyQ"
 author: "Burger"
 description: "Fixed-wing ultralight autonomous UAV"
 created_at: "2025-06-01"
+total_time: "~50 hours"
+
 ---
 
 # FlyQ
