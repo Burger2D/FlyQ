@@ -13,10 +13,10 @@ It all started with [this video by rctestflight](https://www.youtube.com/watch?v
 
 
 List:
-- [-] Finalize Project Goals
-- [-] Finalized Parts List
-- [-] Finalized Budget
-- [-] Finalized Design
+- [x] Finalise Project Goals
+- [x] Finalised Parts List
+- [x] Finalised Budget
+- [x] Finalised Design
 - [ ] Make Custom PCB DVR
 
 
@@ -40,4 +40,4 @@ List:
 | Price Increases.                   | Misc.                                                                              |               |          | $35.00-40.00    | $35-40.00     |                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |                         | Total                                                                              |               |          |           | ~$305.82    |                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 > Price Increases in the above table refer to the increase in price due to a sale ending in Banggoods (Hobby days), from where I am sourcing some parts, this is to offset that cost. 
-> Misc. refers to other stuff I may need during the build, Plastic Glue, filament etc.
+> Misc. refers to other stuff I may need during the build, Plastic Glue, shipping costs to mohid to ship a few things etc. 
