@@ -67,11 +67,11 @@ Also within budget and has sufficient rating.
 ![](https://rcmumbai.com/cdn/shop/files/elrs-r24-v_2_2.jpg?v=1746496897&width=1946)
 MATEKSYS ELRS 2.4GHz Vario Receiver ELRS-R24-V
 ### Camera DVR
-https://shop.runcam.com/runcam-mini-fpv-dvr/![Image 1](https://cdn10.bigcommerce.com/s-m8o52p/products/284/images/1105/RUNCAM-DVR-S-700__61064.1545124056.500.750.jpg?c=3)
+![Image 1](https://cdn10.bigcommerce.com/s-m8o52p/products/284/images/1105/RUNCAM-DVR-S-700__61064.1545124056.500.750.jpg?c=3)
 It is a RunCam Mini FPV DVR, fits right in budget.
 
 ### Camera
-![Buy Caddx Ant Lite Analog Camera at Best Price](https://robu.in/wp-content/uploads/2023/04/ss.jpg)
+![Buy Caddx Ant Lite Analog Camera at Best Price](https://caddxfpv.com/cdn/shop/products/AnalogFPVCameraCaddxAnt2.jpg?v=1616109799&width=1800)
 It's a Caddx Ant Lite Analog Camera (FPV Cycle Edition) (4:3), cheapest while having great quality.
 
 Time spent: ~6-8 hrs
@@ -85,7 +85,7 @@ Remaining electronic stuff for the drone.
 ![](https://aerokartindia.in/wp-content/uploads/2023/06/1366608-1.JPG.png.jpg)
  Samsung INR18650-35E 7.4V 3500mAh 2C 2S1P Li-ion Battery Pack
 ### VTX Antenna
-![Buy Pagoda 2 Antenna 5.8GHz with cover Online at Best Price in India](https://robu.in/wp-content/uploads/2020/01/P-Antenna1.jpg)
+![Buy Pagoda 2 Antenna 5.8GHz with cover Online at Best Price in India](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOIToAActBTHA69Ukxm3Uu9DNRbgT3sux9kg&s)
 Pagoda 2 Antenna 5.8GHz with cover
 
 Time spent: ~4-5 hrs
@@ -94,7 +94,7 @@ Time spent: ~4-5 hrs
 Ground station stuff
 
 ### VRX
-![5.8G UVC OTG Android AV Phone Receiver](https://robu.in/wp-content/uploads/2017/10/5.8G-UVC-OTG-Android-AV-Phone-Receiver.png)
+![5.8G UVC OTG Android AV Phone Receiver](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCUkXOsiFJ-JiBqbDllHC1jdFVnE-Ui7BANA&s)
 5.8G UVC OTG Android AV Phone Receiver
 
 > ## Budget check (retail prices at 1USD = 85.76INR)
@@ -172,3 +172,28 @@ I present you FlyQ, the ultralight fixed-wing autonomous UAV.
 
 ![FlyQ Airframe Design Top](airframe.png)
 .stl files in root
+
+
+# Summery:
+
+Bit of a rewrite, but this improves the formatting of the initial part (sourcing parts [new ones])
+
+Let us recap the project goals
+Project goals:
+ - ultralight
+ - should have autonomous flying capabilities with failsafe RTH
+ - medium range (4-8 km)
+ - cameras
+ - fixed wing
+ - durable
+
+|Sr. No.|Image                                                                                                                       |Name                                                                              |Category   |Sub-Category|Main Use         |Considerations while choosing                                                                                                    |Cost  |Extra remarks                                                                                                  |
+|-------|----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|-----------|------------|-----------------|---------------------------------------------------------------------------------------------------------------------------------|------|---------------------------------------------------------------------------------------------------------------|
+|1      |https://cdn11.bigcommerce.com/s-fhxxhuiq8q/images/stencil/500x500/products/240/1367/SB_WING-MINI-1__04828.1707096339.jpg?c=2|SpeedyBee F405 WING MINI Fixed Wing Flight Controller                             |Electronics|Main control|Flight Controller|Cheap, Very light, Support INAV/Ardupilot, built in barometer, current sensor, OSD and UART capabilities, ecosystem. Entire stack|$39.00|Will probably buy from Banggoods as while it's $2 cheaper when directly compared, the shipping cost takes ~$15.|
+|2      |https://m.media-amazon.com/images/I/51ASMWWGR7L._UF1000,1000_QL80_.jpg                                                      |HGLRC M100 5883 GPS Module M10 Chip with QMC 5883 Compass Ceramic Antenna         |Electronics|Main control|GPS              |Cheap, Has Compass, Accuracy, Latest M10 chip, Has a compass, Lightweight                                                        |$13.00|                                                                                                               |
+|3      |https://m.media-amazon.com/images/I/41W5V3w09pL._UF350,350_QL80_.jpg                                                        |Readytosky 2205 2300KV 3-4S CW CCW Brushless Motor                                |Electronics|Main control|Motor            |Well known FPV motor, reletively lightweight                                                                                     |$8.69 |India shop                                                                                                     |
+|4      |https://ae01.alicdn.com/kf/Sd7f9c6000a61405a96563ed8aa87b3907.jpg_960x960.jpg                                               |Readytosky 40A 2-4S ESC with 3.5mm Banana Connector                               |Electronics|Power       |ESC              |Well known FPV ESC, within limits, reletively lightweight and cheap                                                              |$6.14 |would have bought the 30A 2-4S varient for a dollar less if it was in stock; Have to solder connections        |
+|5      |https://ueeshop.ly200-cdn.com/u_file/UPAX/UPAX406/2308/23/photo/RP3-V2-Detail-Page-EN-Mobile01-9e6f.jpg                     |Radiomaster RP3 ExpressLRS ELRS 2.4GHz LNA+PA Dual Antenna Nano Diversity Receiver|Electronics|RF          |ELRS RX          |Best range vs. Cost, Reletively cheap                                                                                            |$20.00|Have to solder connections                                                                                     |
+|6      |https://imgaz3.staticbg.com/thumb/large/oaupload/banggood/images/78/EF/4299da5d-869b-45a3-80de-5bc60856469b.jpg.webp        |Eachine Sphere Link 5.8GHz WIFI Digital HD                                        |Electronics|Accessory   |FPV system       |Unbeatable price for a HD FPV system (Camera + VTX + Reciever)                                                                   |$70.00|                                                                                                               |
+|7      |https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmdgw4eVREMJC2hH6P0phcIXBU7NcqDeXbFA&s                                |Pro-Range Propellers 6042(6X4.2) Tri Blade Flash 2CW+2CCW 2 Pair Pack- Black      |Structural |Thrust      |Prop.            |Cheap, within parameters. Aerodynamic efficiency                                                                                 |$3.00 |                                                                                                               |
+|8      |https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjw1WUnR5fEDjanitMtx7iaRLjqHcGkv8usQ&s                                |Samsung INR18650-35E 7.4V 3500mAh 2C 2S1P Li-ion Battery Pack                     |Electronics|Power       |Battery          |Cheap, Good Wh vs. Price                                                                                                         |$12.00|                                                                                                               |
