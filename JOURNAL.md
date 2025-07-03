@@ -50,6 +50,14 @@ I've decided to go with the "SpeedyBee F405 WING MINI Fixed Wing Flight Controll
 It is very light at 23g and supports INAV and Ardupilot. It is well within budget at US$35.99 (around $47 USD in Indian sites)
 I've checked out some 40 FCs but this seems to be the best in it's capabilities and price based on the STM32F405. It has integrated IMU, barometer and OSD.
 
+I've read the INAV and Ardupilot docs to compare which one would be simpler for my use case. As I see, Ardupilot is a much more sophisticated solution for drone piloting, while [INAV](https://github.com/iNavFlight/inav) is simpler, and fits my usecase better, which is autonomy for some time, not very long range ops.
+
+In my search for a good FC, I initially came across Matek F405-Wing, which is a nice FC and what I was going to use until I continued searching and found the SpeedyBee F405 Wing Mini, which is much lighter than the Matek version. I also came across the Matek F722-Wing, it is also a nice FC, a little too nice, it's too expensive for this lightweight platform. Betaflight FCs (F411s etc) were too slow to support everything and that kinda raised some questions about it's stabilty running everything.
+This FC was a stack option containing PDBs and current sensors inbuilt. Also has Barometers for altitude measurement. 
+My search for the FC was narrowed down with the help of INAV docs with which I could tell if it had the minimum requirements for my needs, as it needed to run INAV. (ref feature 1 [here](https://github.com/iNavFlight/inav?tab=readme-ov-file#features))
+Read some more about flying with INAV here [https://github.com/iNavFlight/inav/blob/master/docs/INAV_Fixed_Wing_Setup_Guide.pdf](https://github.com/iNavFlight/inav/blob/master/docs/INAV_Fixed_Wing_Setup_Guide.pdf) and [https://github.com/iNavFlight/inav/blob/master/docs/Navigation.md](https://github.com/iNavFlight/inav/blob/master/docs/Navigation.md)
+
+
 Also selected the GPS module to be used with this FC, it's a Flywoo GOKU GM10 Mini V3 GPS
 ![](https://rcmumbai.com/cdn/shop/files/e85e2d6c7765468327dd6c4a101d5d48_1.jpg?v=1746496476&width=810)
 Time spent: ~4 hrs
@@ -61,13 +69,17 @@ Selecting other parts in accordance with compatibilty with FC, budget and projec
 XING 2205 FPV Motor (12/M2) - 2300KV
 ![](https://robu.in/wp-content/uploads/2017/10/robu-1-20.jpg)
 Within budget, efficient rating.
+This is a popular FPV motor within FPV circles. At 2300KV, it produces enough thrust to cruise comfortably with just the right amount of energy. It's reliable, lightweight and efficient, ideal for this project.
 ### ESC
 Readytosky 40A 2-6S Multi-Rotor UAV Drone ESC
 ![Readytosky 40A 2-6S Multi-Rotor UAV Drone ESC, Brushless Electronic Speed Controller for F450, X500, S500, ZD550 RC Helicopters and Quadcopters, OPTO Design, Lightweight 33.2g.](https://cdn11.bigcommerce.com/s-3fd3md1ghs/images/stencil/500x659/products/36110/21347/E-138-N94__21508.1727675782.jpg?c=2)
-Also within budget and has sufficient rating.
+Also, within budget and has a sufficient rating.
+At 40A, this is more than enough for what the motor will ever experience, with enough headroom for boosts past the normal every once in a while. It is reasonably priced and well-known.
 ### ELRS RX
 ![](https://rcmumbai.com/cdn/shop/files/elrs-r24-v_2_2.jpg?v=1746496897&width=1946)
 MATEKSYS ELRS 2.4GHz Vario Receiver ELRS-R24-V
+This is an important component (although one could say this for all of them). It's an [ELRS](https://www.expresslrs.org/) receiver, which stands for [Express Long Range System](https://www.expresslrs.org/), is a "High Performance Open Source Radio Control Link" optimised for long range and low latency. Read a lot in the [ELRS docs](https://www.expresslrs.org/software/mavlink/). It can pull some long-range (50+ km) stuff even on 2.4 GHz.
+
 ### Camera DVR
 ![Image 1](https://cdn10.bigcommerce.com/s-m8o52p/products/284/images/1105/RUNCAM-DVR-S-700__61064.1545124056.500.750.jpg?c=3)
 It is a RunCam Mini FPV DVR, fits right in budget.
@@ -75,6 +87,9 @@ It is a RunCam Mini FPV DVR, fits right in budget.
 ### Camera
 ![Buy Caddx Ant Lite Analog Camera at Best Price](https://caddxfpv.com/cdn/shop/products/AnalogFPVCameraCaddxAnt2.jpg?v=1616109799&width=1800)
 It's a Caddx Ant Lite Analog Camera (FPV Cycle Edition) (4:3), cheapest while having great quality.
+Its cheap, at this price point it's hard to beat. Great for this build.
+
+Spent a lot of time reading the ELRS and INAV docs. Also got help from the Oscar Liang blog. Spent some time researching batteries.
 
 Time spent: ~6-8 hrs
 
