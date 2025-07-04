@@ -82,12 +82,14 @@ This is an important component (although one could say this for all of them). It
 
 ### Camera DVR
 ![Image 1](https://cdn10.bigcommerce.com/s-m8o52p/products/284/images/1105/RUNCAM-DVR-S-700__61064.1545124056.500.750.jpg?c=3)
-It is a RunCam Mini FPV DVR, fits right in budget.
+It is a RunCam Mini FPV DVR, fits right in the budget. 
+It was meh, i didn't quite like it as it can't record in HD but I guess for that price it's the best I can get.
 
 ### Camera
 ![Buy Caddx Ant Lite Analog Camera at Best Price](https://caddxfpv.com/cdn/shop/products/AnalogFPVCameraCaddxAnt2.jpg?v=1616109799&width=1800)
 It's a Caddx Ant Lite Analog Camera (FPV Cycle Edition) (4:3), cheapest while having great quality.
 Its cheap, at this price point it's hard to beat. Great for this build.
+This is cool, cheap and probably not the camera for drones so would need to hack it for it to work with the FC and VTx.
 
 Spent a lot of time reading the ELRS and INAV docs. Also got help from the Oscar Liang blog. Spent some time researching batteries.
 
@@ -98,12 +100,17 @@ Remaining electronic stuff for the drone.
 
 ### VTX![](https://cdn11.bigcommerce.com/s-fhxxhuiq8q/images/stencil/1280x1280/products/136/1271/tx800-1__98008.1698739675.jpg?c=2)
  SpeedyBee TX800 5.8 GHz VTX
+ One of the few available VTxs here, it's cheap-er than most and the transmit power is under limits and enough for mid range stuff.
 ### Battery
 ![](https://aerokartindia.in/wp-content/uploads/2023/06/1366608-1.JPG.png.jpg)
  Samsung INR18650-35E 7.4V 3500mAh 2C 2S1P Li-ion Battery Pack
+ Nice value for the battery pack, it's good that it's made by robu and sold by robu.
 ### VTX Antenna
 ![Buy Pagoda 2 Antenna 5.8GHz with cover Online at Best Price in India](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOIToAActBTHA69Ukxm3Uu9DNRbgT3sux9kg&s)
 Pagoda 2 Antenna 5.8GHz with cover
+Good antenna, cheap, would be used for the drone VTx.
+
+
 
 Time spent: ~4-5 hrs
 
@@ -127,8 +134,12 @@ Ground station stuff
 >  Battery - $12.57
 >  Antenna (drone) - $4.19
 >  ### Total till now - $ 246.94
-Prices taken from best retailers found.
+Prices taken from the best retailers found. That took too long. Finding the cheapest non-scammy retailer for niche stuff is a bit hard. More so in India, thankfully, I was able to find retailers for all the parts. 
 
+Ah, Houston, we have a problem.
+That price is too high; it's more than I thought for just this part of the project. I must do something about it. I suppose I'd have to allow myself to import and change parts for better, more cost-effective alternatives. 
+
+Did some research on drone parts from YouTube and Oscar Liang's blog. They are a nice resource on builds like these, not just these but most other builds would benifit from the infomative blogs and youtube reviews.
 Time spent: 4.5 hrs
 
 ## Break
