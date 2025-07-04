@@ -1,14 +1,13 @@
 # FlyQ
-An Ultralight fixed wing autonomous UAV. It is designed to be a flying wing with a single pusher propeller at the back. The airframe is made of XPS foamboard for lightweight-ness.
-This is sub-250g so it's a micro drone.
+An Ultralight fixed-wing autonomous UAV. It is designed to be a flying wing with a single pusher propeller at the back. The airframe is made of XPS foamboard for lightweight-ness.
+I plan to eventually fly it with a sidestick.
 
 Why?
 It all started with [this video by rctestflight](https://www.youtube.com/watch?v=ULlNktaOUy8), I think. I was fascinated by the idea of a fixed-wing flying objects that and the pictures it captured. I wanted to build something like that, but I wanted it to be ultralight and autonomous. So I started researching on the different types of drones and decided what I want to build. I wanted to start a YSWS with this too (#firefly plug) that is basically this. I am happy I am able to get this far with it.
 
 
-
-![FlyQ Airframe Design Top](airframe_top.png)
 ![FlyQ Airframe Design CAD](airframe.png)
+![FlyQ Airframe Design Top](airframe_top.png)
  
 
 
