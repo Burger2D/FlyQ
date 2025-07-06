@@ -168,8 +168,8 @@ This brings the drone hardware cost below $170 (from ~$250)
 
 Below is the design for the drone airframe, it's going to be built out of XPS foam boards, supported by carbon fiber spars and reinforced with packing tape.
 
-![FlyQ Airframe Design Top](airframe_top.png)
-![FlyQ Airframe Design Inside (basic)](airframe_internal_basic.png)
+![FlyQ Airframe Design Top](./images/airframe_top.png)
+![FlyQ Airframe Design Inside (basic)](./images/airframe_internal_basic.png)
 
 For Accurate wiring, I'd need to have the hardware in hand, so I will not be able to do that until the parts arrive.
 
@@ -198,7 +198,7 @@ Designed with a meticulous selection of components to achieve a compact, efficie
 
 I present you FlyQ, the ultralight fixed-wing autonomous UAV.
 
-![FlyQ Airframe Design Top](airframe.png)
+![FlyQ Airframe Design Top](./images/airframe.png)
 .stl files in root
 
 
@@ -225,3 +225,80 @@ Project goals:
 |6      |https://imgaz3.staticbg.com/thumb/large/oaupload/banggood/images/78/EF/4299da5d-869b-45a3-80de-5bc60856469b.jpg.webp        |Eachine Sphere Link 5.8GHz WIFI Digital HD                                        |Electronics|Accessory   |FPV system       |Unbeatable price for a HD FPV system (Camera + VTX + Reciever)                                                                   |$70.00|                                                                                                               |
 |7      |https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmdgw4eVREMJC2hH6P0phcIXBU7NcqDeXbFA&s                                |Pro-Range Propellers 6042(6X4.2) Tri Blade Flash 2CW+2CCW 2 Pair Pack- Black      |Structural |Thrust      |Prop.            |Cheap, within parameters. Aerodynamic efficiency                                                                                 |$3.00 |                                                                                                               |
 |8      |https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjw1WUnR5fEDjanitMtx7iaRLjqHcGkv8usQ&s                                |Samsung INR18650-35E 7.4V 3500mAh 2C 2S1P Li-ion Battery Pack                     |Electronics|Power       |Battery          |Cheap, Good Wh vs. Price                                                                                                         |$12.00|                                                                                                               |
+
+
+# July - A FPV Monitor
+## July 5th
+I named it July, cause why not. July is a 1080p Touch screen dual antenna SOM based device that can run software to easily access OpenIPC video stream from the Eachine sphere link. Open source and easy to use, just turn it on, connect to pixel pilot and done! 
+![](./images//front_july.png)
+![](./images//back_july.png)
+
+Easily one of the most poweful and long range FPV monitors out there. There aren't many out there too y'know. 
+
+Researched a lot on OpenIPC tech, the CM5, Raxda, RTL8812AU wifi modules and a lot of things. Here is a brief summery of it all.
+
+### Brains, yes, a monitor needs a brain too
+I've decided its best to use a SOM (System on Module).
+- well, I could use a SBC like RPI Zero 2 W, but that would be tedious to put on a PCB, then the connections from it would need to be hacked to support everything.
+- another option is a CM5 board, reletively easier to put on a board and do all the stuff
+
+After reading through the docs at OpenIPC's website and github, I have come to the conclusion that the Radxa ZERO 3W is the recommended SBC for a ground station.
+> #### What is a Ground station?
+> A ground station is a place from where the drone is being controled and supervised, it recieves all* the radio comms from the drone and proceeses it for the controller to get enough infomation about the whereabouts of the drone.
+
+![Spec Pictures](https://radxa.com/zero/3w/spec_zero3w_03.webp)
+![Interfaces](https://radxa.com/zero/3w/mark_zero3w.webp)
+
+It's an epic SBC, and it's actually most recommended for this (being a ground station)
+![](https://rubyfpv.com/images/sbcinfo.png)
+
+But as you can see, its unmountable on a PCB so we gotta improvise, lets think 🤔
+![Spec Pictures](https://radxa.com/zero/3w/spec_zero3w_02.webp)
+Ah ha! We can use the GPIO and connections (USB and DSI connectors) for the connections to required modules.
+Now with our SBC decided, lets select our WIFI 5GHz module
+> random note: I currently have at least a 100 chrome tabs open and more than 50% of those are aliexpress and alibaba sites :help:
+
+So, after reading a lot of docs and talking with some people associated with the hobby, who are much more experienced than me, I found out that these are my current options:
+- RTL873xBU
+- RTL8812AU
+	- BL-R8812AF1  (uses the above chip)
+- RTL8812EU
+	- BL-M8812EU2 (uses the above chip)
+
+So let's remove RTL873xBU from the list, why?
+- it's tiny, hence very low power, it might be fine for tinywoops but not for long range builds like this
+
+well, moving on to RTL8812AU, let's see:
+- its a oldie in this community, hence proven 
+- a bit expensive
+- It is said to have exceptional performence
+
+That sounds nice, let's discuss our last one and get back to this
+
+last but not the least, RTL8812EU:
+- it's new, unproven but at this point we can probably call it middle aged? idk
+- cheap, very.
+- It works, it's great for transmit bit, but fine for recieving I guess, the transmit powers are impressive tho, 800mW!
+
+I guess we have our winner! It's RTL8812AU!
+We'll try to quickily find a suitable board that supports this chip to attach in the monitor along with the SBC.
+
+Found it, just took half an hour, this sheet dosen't do justice to the time spent searching for stuff.
+
+![](https://ae-pic-a1.aliexpress-media.com/kf/S420532721af74f16a8186842bc8b3e8bU.png_960x960.png_.avif)
+This is it! we got it.
+This is a RTL8812AU based network card that we're gonna connect. It's powerful and will help us recieve the signals.
+When making it, we'd cut out the USB and solder it to the RX TX UART ports of the GPIO because closed USB connections aren't reliable.
+> remember this random Aliexpress coupon i found FSUK06, SBPWMFT3LE95 (navarcer audio)
+
+That's it for now, let's think what more do we need.
+
+## July 6th
+
+Good Morning! (Good evening or Good night) choose your greeting based on when you're reading this, (I missed out on Good afternoon but who'd read this at noon, i usually take a nap then /jk)
+Got some good news and some bad news. Bad News first: We can't use the Raxda Zero 3W, it laggy laggy, it doesn't have enough power for what we want to do. As some people with more experience have informed, that would not be the best way to go forward with this. 
+Good news: they also recommended the way to actually go forward with this, behold the Radxa ROCK 4D 
+
+![Spec Pictures](https://radxa.com/rock4/rock4d/spec_rock4d_01.webp)
+
+![Interfaces](https://radxa.com/rock4/rock4d/marked_rock4d.webp)
