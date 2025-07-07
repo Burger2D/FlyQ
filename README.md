@@ -8,7 +8,7 @@ It all started with [this video by rctestflight](https://www.youtube.com/watch?v
 
 ![FlyQ Airframe Design CAD](./images/airframe.png)
 ![FlyQ Airframe Design Top](./images/airframe_top.png)
- 
+![July FPV Monitor](./images/front_july.png)
 
 
 List:
