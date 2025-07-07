@@ -40,3 +40,6 @@ List:
 |                         | Total                                                                              |               |          |           | ~$305.82    |                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 > Price Increases in the above table refer to the increase in price due to a sale ending in Banggoods (Hobby days), from where I am sourcing some parts, this is to offset that cost. 
 > Misc. refers to other stuff I may need during the build, Plastic Glue, shipping costs to mohid to ship a few things etc. 
+
+
+Onshape: https://cad.onshape.com/documents/3a31bd101055f48e2c57a97f/w/3223f853520e071ef3d94c1a/e/74b33148177611be13b0c74b
