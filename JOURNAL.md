@@ -302,3 +302,86 @@ Good news: they also recommended the way to actually go forward with this, behol
 ![Spec Pictures](https://radxa.com/rock4/rock4d/spec_rock4d_01.webp)
 
 ![Interfaces](https://radxa.com/rock4/rock4d/marked_rock4d.webp)
+
+About the Raxda 4D, it's a capable SBC which can do a lot of things, the things which interest us are it's processing abilities and GPU power in which it excels enough.
+So that's what we're going to use.
+
+I am writing this blog 'after the fact' so I am going to miss some research, but it is what it is. 
+
+Well, talking about being what it is, we need to select more stuff, we need to get the monitor, power supply, make the wiring diagram for all of this.
+Before that, let's select the special antennas we need for this
+For our medium range goals we need an antenna with at least 10+ dBi gain to get the video signal.
+After scouring Aliexpress for hours, I think I have found one that'll actually work.
+
+![Maple Wireless Antenna 5.8g 17dbi High Gain Att/manual Sma ...](https://ae01.alicdn.com/kf/S49a390631877407a96ffb6109db314a68.jpg_640x640q90.jpg)
+This thing is a 17dBi gain linearly polarized antenna capable to listening in to the faintest signal. Along with this, I got a 8dBi omni directional antenna should the drone go out of the field of view of this antenna.
+
+Here's an accounting sheet for the project, it contains all the parts I have ordered in relation to it, by all, I actually mean all, even the itty bitty ones.
+You can check it out [here](https://docs.google.com/spreadsheets/d/1skVhD2z50aWqVVDrjqqTZmjcNkN75A2qXTNfnrAGnOc/edit?usp=sharing).
+
+Now that we have this antenna too, let's discuss some more about the monitor itself, first of all, we need an monitor
+
+![](https://ae-pic-a1.aliexpress-media.com/kf/S0dafdfff9c1345f188a14131c9729e02l.png_960x960.png_.avif)
+found one, this is a one cheap excellent display, it is a 7" display and prefectly fits in our monitor case.
+
+time spent: ~4-5 hrs
+
+## July 7th
+Hello again, good to see you back here. Let's make a rudementry design for the whole thing (with all the parts)
+
+![Internals July Monitor](./images/internal_july.png)
+
+Yep, that's the plan, and there's a battery in the back (it'll be a 10000mAh powerbank I have)
+
+that's it for the physical stuff I think.
+
+Now let's talk software. Geez, it's been long, finally I can close the AliExpress tabs. Wait a moment, I gotta close a few chrome windows.
+*angry chrome noises*
+ya, let's get to discussing software.
+
+The FPV Camera uses OpenIPC, which is a protocol made initially for easy viewing with IP cameras which hobbiesyt quickly modifed to work with drones. At the basic level, it uses WFB-ng which is the next generation of long range packet radio based on the wifi radio.
+![WFB-ng](https://github.com/svpcom/wfb-ng/raw/master/doc/logo-big.png)
+
+a snippet directly from the px4 docs
+>## WFB-ng Overview
+>
+> The  _WFB-ng project_  provides a data transport that use low-level WiFi packets to avoid the distance and latency limitations of the ordinary IEEE 802.11 stack.
+>
+>The high level benefits of  _WFB-ng_  include:
+>
+>-   Low-latency video link.
+>-   Bidirectional telemetry link (MAVLink).
+>-   TCP/IP tunnel.
+>-   Automatic TX diversity - use multiple cards on the ground to avoid antenna tracker.
+>-   Full link encryption and authentication (using  [libsodium](https://doc.libsodium.org/)).
+>-   Aggregation of MAVLink packets (pack small packets into batches before transmitting).
+>-   Enhanced  [OSD](https://github.com/svpcom/wfb-ng-osd)  for Raspberry PI or generic linux desktop with gstreamer.
+
+In a gist, it helps us establish a TCP/IP tunnel from the drone to the Groundstation so we can stream video + telemetry. This is cool open source software which everyone should be able to access and hack for their own use. That's what makes it even more cooler.
+
+As you'd see, I am using a RTL8812au (for receiving) which is in the [list of supported modules](https://github.com/svpcom/wfb-ng?tab=readme-ov-file#supported-wifi-hardware), so that's great!
+For our Raxda pi we'd follow the basic guidelines and then start with our custom approach to modify settings for the best link reliability and bitrate.
+
+time spent: ~4 hr
+
+## July 8th
+
+After reading OpenIPC docs in depth, I realized this is 
+I should have known about it ages ago.
+
+I am reading the OpenIPC installation docs (https://github.com/OpenIPC/wiki/blob/master/en/installation.md) to better understand it all.
+
+Okay, after a lot of talking with more established community members, here is a snippet of what they said when i later went on to confirm my final selection of the stuff.
+![chat snippet](./images/chat1.png)
+
+So, I guess we're back to the Raxda zero 3W, which is actually good news! It's apprently works more reliably and is cheaper too!
+For people who forgot what the zero 3W looked like:
+![Interfaces](https://radxa.com/zero/3w/mark_zero3w.webp)
+
+
+
+It's actually great as I already talked about in my july 6th entry. We're mainly interested in the processing power of the device and it's video decoding capabilities and the zero 3W has plenty of both. It uses a Rockchip RK3566 SoC which has the Quad‑core Arm® Cortex®‑A55 (Armv8) 64‑bit @ 1.6GHz and a Arm® Mali™‑G52‑2EE as GPU. Both good.
+
+It has the HDMI port so that's what we're going to use to connect to the display.
+Honestly tho, I might just resolder the HDMI connection pointing inwards, it's just at the edge so it kinda sucks, a cable outwards may work but let's see.
+
