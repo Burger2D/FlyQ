@@ -285,10 +285,11 @@ We'll try to quickily find a suitable board that supports this chip to attach in
 
 Found it, just took half an hour, this sheet dosen't do justice to the time spent searching for stuff.
 
-![](https://ae-pic-a1.aliexpress-media.com/kf/S420532721af74f16a8186842bc8b3e8bU.png_960x960.png_.avif)
+![](https://raw.githubusercontent.com/OpenIPC/docs/refs/heads/main/src/assets/images/bl-r8812af1-top.png)
+
 This is it! we got it.
 This is a RTL8812AU based network card that we're gonna connect. It's powerful and will help us recieve the signals.
-When making it, we'd cut out the USB and solder it to the RX TX UART ports of the GPIO because closed USB connections aren't reliable.
+
 > remember this random Aliexpress coupon i found FSUK06, SBPWMFT3LE95 (navarcer audio)
 
 That's it for now, let's think what more do we need.
@@ -384,4 +385,31 @@ It's actually great as I already talked about in my july 6th entry. We're mainly
 
 It has the HDMI port so that's what we're going to use to connect to the display.
 Honestly tho, I might just resolder the HDMI connection pointing inwards, it's just at the edge so it kinda sucks, a cable outwards may work but let's see.
+
+time spent: ~2 hrs
+
+## July 9th
+
+Let's make a custom RPI type uHAT to integrate this all into the Radxa Zero 3W easily.
+The uHAT would act as our interface with the outside so we'd be adding a few buttons and a temp probe to it too.
+An OLED screen would be nice too, it'll act as a status indicator for the device and show some basic info like IP address, temperature, battery level etc.
+What else? A few LEDs to indicate the status of the device, like if it's on, if it's connected to the drone, if it's recording etc.
+
+
+> extra note, midway through designing the uHAT, I realized that the uHAT can be actually also used as a adapter for a phone so it can be used with the pixelpilot app too, which is kinda RAD, even smaller footprint! Will definetly try to make it work with a phone too.
+ 
+![](https://ae-pic-a1.aliexpress-media.com/kf/Sf5c733373cf449eb807e02e81d769d5bZ.jpg_960x960q75.jpg)
+
+# June 15th
+
+Did a lot of work in the last week, I realized that just custom designing everything is not efficient always BUT ITS THE BEST THING YOU CAN DO!
+
+So I did, the HAT supports powering the zero 3W from a battery connection directly, connects the BL-R8812AF1 module with the computer and also powers it, acts as the main interface for the thing too (houses the buttons on a diff. board)
+> random note: walmart sells these chips?! https://www.walmart.com/ip/RTL8812AU-BL-R8812AF1-Wireless-Module-1200M-Dual-Band-AC-Smart-Multifunction-Convenient-Wifi-High-Power-Module/5468431768
+
+![uHAT design](./images/uhat_pcb.png)
+
+
+kinda took too long but happy that it's done.
+this provides power to both the SBC and the BL-R8812AF1 module from the battery connection, connects the BL-R8812AF1 module to the SBC via USB GPIO. (remember to do the changes on the SBC to make it work with the USB GPIO)
 
