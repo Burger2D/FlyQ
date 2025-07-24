@@ -1,4 +1,4 @@
-# FlyQ
+# FlyQ & FPV Monitor
 An Ultralight fixed-wing autonomous UAV. It is designed to be a flying wing with a single pusher propeller at the back. The airframe is made of XPS foamboard for lightweight-ness.
 I plan to eventually fly it with a sidestick.
 
@@ -10,6 +10,9 @@ It all started with [this video by rctestflight](https://www.youtube.com/watch?v
 ![FlyQ Airframe Design CAD](./images/airframe.png)
 
 ![FlyQ Airframe Design Top](./images/airframe_top.png)
+
+# July the FPV Monitor
+This is a custom monitor based on openIPC to stream video from the UAV.
 ![July FPV Monitor](./images/front_july.png)
 
 
