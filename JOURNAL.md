@@ -24,7 +24,7 @@ Project goals:
 Considering all goals, I have decided:
 It is going to be a flying wing design with single rotor at the back (pusher).
 
-![FlyQ Airframe Design Top](airframe_top.png)
+![FlyQ Airframe Design Top](images/airframe_top.png)
 
 
 Time spent: ~3-4 hrs (research)
