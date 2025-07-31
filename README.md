@@ -11,9 +11,6 @@ It all started with [this video by rctestflight](https://www.youtube.com/watch?v
 
 ![FlyQ Airframe Design Top](./images/airframe_top.png)
 
-# July the FPV Monitor
-This is a custom monitor based on openIPC to stream video from the UAV.
-![July FPV Monitor](./images/front_july.png)
 
 
 List:
